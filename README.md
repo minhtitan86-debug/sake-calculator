@@ -9,6 +9,9 @@ Máy tính khoa học và phòng luyện giải toán bằng máy tính cầm ta
 - Bộ tính biểu thức an toàn, không dùng `eval()`.
 - Thứ tự phép tính, ngoặc, phần trăm, lũy thừa, căn, giai thừa và Ans.
 - sin, cos, tan, log, ln với DEG/RAD.
+- Phím MODE gồm Tính toán, Kiểm tra biểu thức và Luyện tập.
+- VERIFY so sánh an toàn giá trị hai biểu thức và chỉ ra kết quả từng vế.
+- Screen Wake Lock giữ màn hình sáng trong lúc học; tự kích hoạt lại khi quay về ứng dụng.
 - 5 chủ đề và ít nhất 50 biến thể bài: tính nhanh, phân số, lũy thừa, số học, lượng giác.
 - Ba cấp gợi ý, lời giải và chuỗi phím đề xuất.
 - XP, chuỗi ngày, thống kê từng chủ đề và sao lưu JSON.
