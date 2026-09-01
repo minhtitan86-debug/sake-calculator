@@ -1,69 +1,42 @@
 # Sake Calculator
 
-Ứng dụng máy tính khoa học học tập dành cho học sinh.
+Máy tính khoa học và phòng luyện giải toán bằng máy tính cầm tay dành cho học sinh. Ứng dụng chạy trên trình duyệt, không quảng cáo, không tài khoản và không thu thập dữ liệu cá nhân.
 
-Mục tiêu của dự án là tạo một máy tính khoa học đơn giản, dễ sử dụng trên điện thoại, giúp học sinh làm quen với cách sử dụng máy tính trước khi sử dụng máy tính cầm tay thực tế.
+> Ứng dụng luyện tập độc lập, không liên kết hoặc được bảo trợ bởi CASIO. Điện thoại không thay thế máy tính được phép sử dụng trong kỳ thi.
 
-## V1
+## Giai đoạn 1
 
-Các chức năng dự kiến:
+- Bộ tính biểu thức an toàn, không dùng `eval()`.
+- Thứ tự phép tính, ngoặc, phần trăm, lũy thừa, căn, giai thừa và Ans.
+- sin, cos, tan, log, ln với DEG/RAD.
+- 5 chủ đề và ít nhất 50 biến thể bài: tính nhanh, phân số, lũy thừa, số học, lượng giác.
+- Ba cấp gợi ý, lời giải và chuỗi phím đề xuất.
+- XP, chuỗi ngày, thống kê từng chủ đề và sao lưu JSON.
+- Giao diện responsive, PWA ngoại tuyến, kiểm thử CI và GitHub Pages.
 
-- Cộng, trừ, nhân, chia
-- Dấu ngoặc
-- Số thập phân
-- Phân số
-- Phần trăm
-- Căn bậc hai
-- Bình phương
-- Lũy thừa
-- Ans
-- DEL
-- AC
-- Hiển thị biểu thức và kết quả
+## Chạy và kiểm thử
 
-## Chế độ
+```bash
+npm test
+python3 -m http.server 8000
+```
 
-### NORMAL
-Sử dụng như một máy tính khoa học thông thường.
+Mở `http://localhost:8000`. Điều khiển máy tính bằng số/toán tử; Enter để tính, Backspace để xóa, Escape để xóa hết.
 
-### LEARN
-Hỗ trợ học sinh hiểu cách thực hiện một số phép tính.
+## GitHub Pages
 
-## Nền tảng
+Workflow tự kiểm thử và triển khai nhánh `main`. Trong **Settings → Pages**, chọn **GitHub Actions** làm Source nếu cần. Địa chỉ dự kiến:
 
-Ứng dụng được xây dựng bằng:
+https://minhtitan86-debug.github.io/sake-calculator/
 
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages
+## Cấu trúc
 
-Không cần cài đặt từ App Store.
+- `js/engine.js`: bộ phân tích và tính biểu thức
+- `js/questions.js`: sinh/chấm bài
+- `js/storage.js`: tiến độ cục bộ
+- `js/app.js`: giao diện
+- `tests/`: kiểm thử Node.js
 
-Có thể mở bằng Safari trên iPhone và chọn:
+## Tiếp theo
 
-Share → Add to Home Screen
-
-để sử dụng gần giống một ứng dụng độc lập.
-
-## Lộ trình
-
-### Version 1
-Máy tính cơ bản cho học sinh lớp 6.
-
-### Version 2
-Phân số và các chức năng toán học nâng cao hơn.
-
-### Version 3
-Thêm chế độ học tập và hướng dẫn.
-
-### Version 4
-Thêm các hàm khoa học như sin, cos, tan, log và thống kê.
-
-## Lưu ý
-
-Ứng dụng này được tạo với mục đích học tập.
-
-Không sử dụng thương hiệu, logo hoặc giao diện độc quyền của CASIO.
-
-Ứng dụng trên điện thoại không thay thế máy tính cầm tay trong các kỳ kiểm tra nếu nhà trường không cho phép sử dụng điện thoại.
+Phương trình, hệ phương trình, bảng giá trị, thống kê, thi thử, ma trận, vector và số phức sẽ được triển khai trong các giai đoạn sau.

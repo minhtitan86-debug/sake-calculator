@@ -1,0 +1,1 @@
+const C='sake-v1',A=['./','./index.html','./styles.css','./js/app.js','./js/engine.js','./js/questions.js','./js/storage.js'];self.addEventListener('install',e=>e.waitUntil(caches.open(C).then(c=>c.addAll(A))));self.addEventListener('fetch',e=>e.request.method==='GET'&&e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request))));
